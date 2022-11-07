@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Consolas;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -16,6 +17,10 @@ body {
 }
 
 /* Header */
+header {
+  height: 100vh;
+}
+
 .navbar {
   background-color: var(--color-primary);
   color: var(--color-secondary);
@@ -23,9 +28,17 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 25px 100px;
+  position: absolute;
+  width: 100%;
 }
 
-.navbar .logo {
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.navbar .logo,
+.navbar .header--bars {
   z-index: 11;
 }
 
@@ -82,13 +95,13 @@ body {
     justify-content: center;
     align-items: center;
     left: 50%;
-    top: -20%;
+    top: -250%;
     transform: translateX(-50%);
     gap: 30px;
     transition: all 0.3s;
     background-color: var(--color-primary);
     width: 100%;
-    padding-bottom: 30px;
+    padding: 75px 0 30px 0;
   }
 
   .header--bars {
@@ -125,6 +138,5 @@ body {
   .navbar--active {
     opacity: 1;
     top: 10%;
-    z-index: 10;
   }
 }
