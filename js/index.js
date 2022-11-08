@@ -15,10 +15,18 @@ navBarLinks.forEach(item => {
   item.addEventListener('click', toggleNavBar)
 })
 
+// Header-Section scroll img
+const meImg = document.querySelector('#meImg')
+const headerSection = document.querySelector('.header--section')
+
 document.addEventListener('scroll', function (e) {
-  scrollY > 740
+  const value = window.scrollY
+
+  value > headerSection.clientHeight
     ? navBar.classList.add('sticky')
     : navBar.classList.remove('sticky')
+
+  meImg.style.top = value * 0.4 + 'px'
 })
 
 for (let i = 0; i > navBarLinks.length; i++) {
