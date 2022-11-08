@@ -122,10 +122,12 @@ header {
 }
 
 .header--content h1 {
+  position: relative;
   font-size: 70px;
 }
 
 .header--content p {
+  position: relative;
   font-size: 30px;
 }
 

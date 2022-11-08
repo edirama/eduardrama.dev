@@ -18,6 +18,11 @@ navBarLinks.forEach(item => {
 // Header-Section scroll img
 const meImg = document.querySelector('#meImg')
 const headerSection = document.querySelector('.header--section')
+const headerContentHeading = document.querySelector('.header--content-heading')
+const headerContentParagraph = document.querySelector(
+  '.header--content-paragraph'
+)
+const readMore = document.querySelector('.read--more')
 
 document.addEventListener('scroll', function (e) {
   const value = window.scrollY
@@ -27,6 +32,19 @@ document.addEventListener('scroll', function (e) {
     : navBar.classList.remove('sticky')
 
   meImg.style.top = value * 0.4 + 'px'
+  headerContentHeading.style.left = value * 1.25 + 'px'
+  headerContentParagraph.style.left = value * 1 + 'px'
+  readMore.style.left = value * 0.75 + 'px'
+
+  if (window.innerWidth <= 430) {
+    headerContentHeading.style.bottom = value * 1.25 + 'px'
+    headerContentParagraph.style.bottom = value * 1 + 'px'
+    readMore.style.bottom = value * 0.75 + 'px'
+  } else {
+    headerContentHeading.style.top = value * 0.7 + 'px'
+    headerContentParagraph.style.top = value * 0.7 + 'px'
+    readMore.style.top = value * 0.7 + 'px'
+  }
 })
 
 for (let i = 0; i > navBarLinks.length; i++) {
