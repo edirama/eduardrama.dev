@@ -22,7 +22,7 @@ const headerSection = document.querySelector('.header--section')
 document.addEventListener('scroll', function (e) {
   const value = window.scrollY
 
-  value > headerSection.clientHeight
+  value > headerSection.clientHeight - 1
     ? navBar.classList.add('sticky')
     : navBar.classList.remove('sticky')
 

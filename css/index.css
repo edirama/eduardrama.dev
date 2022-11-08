@@ -221,13 +221,13 @@ header {
   .header--section .meImg {
     width: 100%;
     left: 50%;
-    margin-top: 90%;
+    margin-top: 80%;
     transform: translate(-50%, -50%);
   }
 
   .header--content {
     left: 0;
-    top: 80%;
+    top: 72vh;
     width: 100%;
     padding: 0 20px;
   }
