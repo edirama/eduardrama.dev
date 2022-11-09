@@ -10,6 +10,9 @@
   --color-primary: #414a51;
   --color-secondary: #5ccbe3;
   --color-third: #bfb9d5;
+
+  --color-transparent-primary: #414a51d5;
+  --color-transparent-secondary: #5ccae3d6;
 }
 
 body {
@@ -252,15 +255,10 @@ header {
   }
 }
 
-/* Main */
-main {
-  padding: 0 20vw;
-}
-
 /* About */
 .about {
   height: 100vh;
-  padding: 100px 0;
+  padding: 100px 20vw;
   color: var(--color-primary);
 }
 
@@ -370,6 +368,208 @@ main {
   right: 0;
 }
 
-.hidden {
-  display: none;
+@media screen and (max-width: 431px) {
+  /* About */
+  .about {
+    padding: 80px 2vw;
+  }
+
+  .about--title {
+    gap: 20px;
+  }
+
+  .slider {
+    height: 450px;
+  }
+
+  .slider__btn--left {
+    left: 6.2%;
+  }
+
+  .slider__btn--right {
+    right: 6.2%;
+  }
+}
+
+/* My Work */
+.my--works {
+  width: 100%;
+  padding: 100px 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  height: 100vh;
+  color: var(--color-primary);
+
+  background-image: linear-gradient(
+    to bottom,
+    white 5%,
+    var(--color-primary) 50%,
+    white 100%
+  );
+}
+
+.works {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.ardi {
+  background-image: url('../images/ardi.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.a6i {
+  background-image: url('../images/a6i.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.zogu {
+  background-image: url('../images/zogu.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.work {
+  /* border: 1px solid black; */
+  width: 22.7%;
+  height: 100%;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.work::before {
+  content: '';
+  position: absolute;
+  background-color: black;
+  width: 50%;
+  height: 4%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 8px 8px;
+}
+
+.about--work {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    var(--color-transparent-primary),
+    var(--color-transparent-secondary)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  padding: 0 10%;
+  color: var(--color-primary);
+  transform: translateY(220%);
+  transition: all 0.7s;
+}
+
+.about--work a {
+  text-decoration: none;
+  color: var(--color-third);
+  transition: all 0.3s;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about--work a:hover {
+  color: var(--color-secondary);
+  font-size: 20px;
+}
+
+.work:hover .about--work {
+  transform: translateY(0);
+  height: 100%;
+}
+
+@media screen and (max-width: 431px) {
+  /* My Work */
+  .my--works {
+    height: 300vh;
+    padding: 80px 0;
+  }
+
+  .works {
+    flex-direction: column;
+    height: 270vh;
+  }
+
+  .work {
+    width: 60%;
+    height: 80vh;
+  }
+
+  .work::before {
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 50%;
+    height: 4%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 8px 8px;
+  }
+
+  .about--work {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    background-image: linear-gradient(
+      to top,
+      var(--color-transparent-primary),
+      var(--color-transparent-secondary)
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    padding: 0 10%;
+    color: var(--color-primary);
+    transform: translateY(220%);
+    transition: all 0.7s;
+  }
+
+  .about--work a {
+    text-decoration: none;
+    color: var(--color-third);
+    transition: all 0.3s;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about--work a:hover {
+    color: var(--color-secondary);
+    font-size: 20px;
+  }
+
+  .work:hover .about--work {
+    transform: translateY(0);
+    height: 100%;
+  }
 }
