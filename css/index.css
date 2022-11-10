@@ -658,7 +658,8 @@ header {
   outline: none;
   border-radius: 5px;
   border: none;
-  background-color: var(--color-third);
+  border: 1px solid var(--color-third);
+  background-color: var(--color-primary);
 }
 
 .message textarea {
@@ -666,19 +667,16 @@ header {
 }
 
 .label {
+  padding: 0 10px;
   position: absolute;
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
   transition: all 0.3s;
-  /* background-image: linear-gradient(
-    to bottom,
-    var(--color-primary) 50%,
-    var(--color-third) 50%
-  ); */
+  background-color: var(--color-primary);
 }
 
-.message .label {
+.message .textarea--label {
   top: 10px;
   transform: translateY(0);
 }
@@ -689,4 +687,43 @@ header {
 
 .submit--btn {
   width: 120%;
+}
+
+.label--active {
+  top: 0;
+}
+
+.textarea--active {
+  top: 0;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 431px) {
+  .contact {
+    padding: 100px 2vw;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .contact--direct {
+    width: 70%;
+  }
+
+  .send--message-btn {
+    padding: 10px 10px;
+    font-size: 20px;
+  }
+
+  .submit--btn {
+    width: 120%;
+  }
+
+  .label--active {
+    top: 0;
+  }
+
+  .textarea--active {
+    top: 0;
+    transform: translateY(-50%);
+  }
 }

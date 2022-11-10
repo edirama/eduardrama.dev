@@ -129,3 +129,22 @@ const slider = function () {
   })
 }
 slider()
+
+// Form style
+const labels = document.querySelectorAll('.label')
+const inputs = document.querySelectorAll('.input')
+const textarea = document.querySelector('.textarea')
+const textareaLabel = document.querySelector('.textarea--label')
+
+for (let i = 0; i < inputs.length; i++) {
+  inputs[i].addEventListener('focus', function () {
+    labels[i].classList.add('label--active')
+  })
+  inputs[i].addEventListener('focusout', function () {
+    labels[i].classList.remove('label--active')
+  })
+}
+
+textarea.addEventListener('focus', function () {
+  textareaLabel.classList.add('textarea--active')
+})
