@@ -407,13 +407,6 @@ header {
   gap: 50px;
   height: 100vh;
   color: var(--color-primary);
-
-  /* background-image: linear-gradient(
-    to bottom,
-    white 5%,
-    var(--color-primary) 50%,
-    white 100%
-  ); */
 }
 
 .my--works h1 {
@@ -451,7 +444,6 @@ header {
 }
 
 .work {
-  /* border: 1px solid black; */
   width: 22.7%;
   height: 100%;
   border-radius: 20px;
@@ -530,55 +522,7 @@ header {
     height: 80vh;
   }
 
-  .work::before {
-    content: '';
-    position: absolute;
-    background-color: black;
-    width: 50%;
-    height: 4%;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 0 0 8px 8px;
-  }
-
-  .about--work {
-    top: 0;
-    left: 0;
-    position: absolute;
-    height: 100%;
-    background-image: linear-gradient(
-      to top,
-      var(--color-transparent-primary),
-      var(--color-transparent-secondary)
-    );
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10%;
-    padding: 0 10%;
-    color: var(--color-primary);
-    transform: translateY(220%);
-    transition: all 0.7s;
-  }
-
-  .about--work a {
-    text-decoration: none;
-    color: var(--color-third);
-    transition: all 0.3s;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .about--work a:hover {
-    color: var(--color-secondary);
-    font-size: 20px;
-  }
-
-  .work:hover .about--work {
+  .work .about--work {
     transform: translateY(0);
     height: 100%;
   }
